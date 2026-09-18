@@ -13,6 +13,7 @@ import { GAMES } from '../data/mockData';
 import { useCurrency } from '../context/CurrencyContext';
 import { useRouter } from '../context/RouterContext';
 import { GameCategory } from '../types';
+import { assetUrl } from '../utils/assets';
 
 export const GamesPage: React.FC = () => {
   const { formatPrice } = useCurrency();
@@ -165,7 +166,7 @@ export const GamesPage: React.FC = () => {
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.onerror = null;
-                    target.src = '/steam-wallet-card.svg';
+                    target.src = assetUrl('/steam-wallet-card.svg');
                   }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

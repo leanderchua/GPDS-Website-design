@@ -7,6 +7,7 @@ import {
   BlogPost, 
   Order 
 } from '../types';
+import { assetUrl } from '../utils/assets';
 
 export const GAMES: Game[] = [
   {
@@ -226,8 +227,8 @@ export const GAMES: Game[] = [
     rating: 5.0,
     reviewsCount: 14200,
     discountBadge: '5% OFF',
-    image: '/steam-wallet-card.svg',
-    bannerImage: '/steam-deck.jpg',
+    image: assetUrl('/steam-wallet-card.svg'),
+    bannerImage: assetUrl('/steam-deck.jpg'),
     description: 'Buy a Steam Wallet Code in the Philippines at GPDS. Pay with GCash, Maya, or QRPH and get a digital code by email to redeem on your PH Steam account.',
     deliveryTime: 'Instant Email',
     requiresServerId: false,

@@ -10,6 +10,7 @@ import {
   Award 
 } from 'lucide-react';
 import { Link } from '../../context/RouterContext';
+import { assetUrl } from '../../utils/assets';
 
 const FacebookIcon = () => (
   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -74,7 +75,7 @@ export const Footer: React.FC = () => {
           <div className="col-span-2 md:col-span-1 space-y-4">
             <Link to="/" className="inline-block group" aria-label="GPDS GAME SHOP Home">
               <img 
-                src="/gpds_logo.png" 
+                src={assetUrl("/gpds_logo.png")} 
                 alt="GPDS GAME SHOP" 
                 className="h-9 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-[0_2px_8px_rgba(240,192,48,0.2)]" 
               />

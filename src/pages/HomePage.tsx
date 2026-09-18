@@ -38,6 +38,7 @@ import {
 import { useCurrency } from '../context/CurrencyContext';
 import { useRouter, Link } from '../context/RouterContext';
 import { EsportsHeroBackground } from '../components/home/EsportsHeroBackground';
+import { assetUrl } from '../utils/assets';
 
 export const HomePage: React.FC = () => {
   const { formatPrice } = useCurrency();
@@ -121,7 +122,7 @@ export const HomePage: React.FC = () => {
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.onerror = null;
-            target.src = '/steam-wallet-card.svg';
+            target.src = assetUrl('/steam-wallet-card.svg');
           }}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
@@ -356,7 +357,7 @@ export const HomePage: React.FC = () => {
             className="relative rounded-2xl overflow-hidden border border-brand-gold/30 hover:border-brand-gold/60 cursor-pointer transition-all shadow-xl group"
           >
             <img 
-              src="/slider/free_code.png" 
+              src={assetUrl("/slider/free_code.png")} 
               alt="Get Your Free Code"
               className="w-full h-auto max-h-[220px] sm:max-h-[300px] object-cover group-hover:scale-[1.02] transition-transform duration-500"
             />

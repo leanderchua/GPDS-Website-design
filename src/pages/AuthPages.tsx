@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useRouter, Link } from '../context/RouterContext';
+import { assetUrl } from '../utils/assets';
 
 export const AuthPages: React.FC<{ initialMode?: 'login' | 'register' }> = ({ initialMode = 'login' }) => {
   const [mode, setMode] = useState<'login' | 'register'>(initialMode);
@@ -43,7 +44,7 @@ export const AuthPages: React.FC<{ initialMode?: 'login' | 'register' }> = ({ in
       <div className="text-center space-y-3">
         <Link to="/" className="inline-block group" aria-label="GPDS GAME SHOP Home">
           <img 
-            src="/gpds_logo.png" 
+            src={assetUrl("/gpds_logo.png")} 
             alt="GPDS GAME SHOP" 
             className="h-11 w-auto mx-auto object-contain transition-transform group-hover:scale-105 drop-shadow-[0_4px_16px_rgba(240,192,48,0.3)]" 
           />

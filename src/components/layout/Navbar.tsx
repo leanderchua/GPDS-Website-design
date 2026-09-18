@@ -20,6 +20,7 @@ import { useCurrency } from '../../context/CurrencyContext';
 import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
 import { CurrencyCode } from '../../types';
+import { assetUrl } from '../../utils/assets';
 
 interface NavbarProps {
   onOpenSearch: () => void;
@@ -59,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
           <div className="flex items-center gap-3 shrink-0">
             <Link to="/" className="flex items-center gap-2 group shrink-0" aria-label="GPDS GAME SHOP Home">
               <img 
-                src="/gpds_logo.png" 
+                src={assetUrl("/gpds_logo.png")} 
                 alt="GPDS GAME SHOP" 
                 className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-[0_2px_10px_rgba(240,192,48,0.25)]" 
               />

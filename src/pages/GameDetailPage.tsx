@@ -19,6 +19,8 @@ import { GAMES, PAYMENT_METHODS, VOUCHERS } from '../data/mockData';
 import { useCurrency } from '../context/CurrencyContext';
 import { useAuth } from '../context/AuthContext';
 import { useRouter } from '../context/RouterContext';
+import { useCart } from '../context/CartContext';
+import { assetUrl } from '../utils/assets';
 import { PaymentModal } from '../components/topup/PaymentModal';
 import { DenominationItem, PaymentMethod } from '../types';
 
@@ -163,7 +165,7 @@ export const GameDetailPage: React.FC = () => {
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.onerror = null;
-              target.src = '/steam-deck.jpg';
+              target.src = assetUrl('/steam-deck.jpg');
             }}
             className="w-full h-full object-cover opacity-35 filter blur-[1px]"
           />
@@ -179,7 +181,7 @@ export const GameDetailPage: React.FC = () => {
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.onerror = null;
-                target.src = '/steam-wallet-card.svg';
+                target.src = assetUrl('/steam-wallet-card.svg');
               }}
               className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-brand-gold shadow-2xl shrink-0"
             />

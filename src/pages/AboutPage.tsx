@@ -10,6 +10,7 @@ import {
   Heart 
 } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
+import { assetUrl } from '../utils/assets';
 
 export const AboutPage: React.FC = () => {
   const { navigate } = useRouter();
@@ -29,7 +30,7 @@ export const AboutPage: React.FC = () => {
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="flex justify-center pb-1">
           <img 
-            src="/gpds_logo.png" 
+            src={assetUrl("/gpds_logo.png")} 
             alt="GPDS GAME SHOP" 
             className="h-12 sm:h-14 w-auto object-contain drop-shadow-[0_4px_20px_rgba(240,192,48,0.3)]" 
           />
